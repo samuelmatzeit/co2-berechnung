@@ -1,0 +1,35 @@
+<div class="form-container">
+    
+    <div class="form-group">
+      <h2>Für welches Jahr soll die Berechnung gestartet werden?</h2>
+      <mat-form-field>
+        <mat-label>Jahr auswählen</mat-label>
+        <mat-select [(value)]="selectedYear">
+          <mat-option *ngFor="let year of yearOptions" [value]="year.value">
+            {{ year.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+    <div class="form-group">
+      <h2>Wähle eine interne Bezeichnung</h2>
+      <mat-form-field>
+        <mat-label>Interne Bezeichnung</mat-label>
+        <input matInput [(ngModel)]="internalDesignation" placeholder="IBNT-2023-487">
+      </mat-form-field>
+    </div>
+  
+    <div class="form-group">
+      <h2>Daten übernehmen aus</h2>
+      <mat-form-field>
+        <mat-label>Daten (optional)</mat-label>
+        <mat-select [(value)]="selectedData">
+          <mat-option *ngFor="let data of dataOptions" [value]="data.value">
+            {{ data.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  

@@ -1,0 +1,67 @@
+.bg-amber-50 {
+    background-color: #FAFAEE;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.space-x-8 > :not(:last-child) {
+    margin-right: 2rem;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-green-500 {
+    color: #4E6629;
+}
+
+.text-red-500 {
+    color: #EF4444;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.w-6 {
+    width: 1.5rem;
+}
+
+.h-6 {
+    height: 1.5rem;
+}
