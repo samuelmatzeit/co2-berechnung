@@ -1,0 +1,64 @@
+.form-container {
+    background-color: #DCE7C7;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 620px;
+    overflow-y: auto;
+    height: 620px;
+
+  }
+
+.mat-form-field {
+    width: 25%; /* Adjust width to fit within the container */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+    background-color: #E1E4D5;
+    border: 1px solid #586249;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px; /* Add margin between containers */
+}
+.location-input {
+    flex-grow: 1;
+    margin-right: 5px;
+    margin-left: 40px; /* Add margin to account for X button space */
+}
+
+.remove-btn {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #BA1A1A;
+}
+
+.add-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #DCE7C7;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    position: relative; /* Ensure relative positioning for centering */
+}
+
+.add-btn mat-icon {
+    color: #000000;
+    font-size: 24px; /* Ensure the plus icon is the correct size */
+    position: absolute; /* Absolute positioning within the button */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the icon */
+}

@@ -1,0 +1,28 @@
+<div class="form-container">
+    <div class="form-group" *ngFor="let location of locations; let i = index">
+      <div class="location-container">
+        <button mat-icon-button class="remove-btn" *ngIf="locations.length > 1 && i === locations.length - 1" (click)="removeLocation(i)">
+          <mat-icon>cancel</mat-icon>
+        </button>
+        <mat-form-field class="location-input">
+          <mat-label>Vertragsbezeichnung</mat-label>
+          <input matInput [(ngModel)]="location.contractName">
+        </mat-form-field>
+        <mat-form-field class="location-input">
+          <mat-label>Typ</mat-label>
+          <mat-select [(ngModel)]="location.type" (selectionChange)="onTypeChange(location)">
+            <mat-option *ngFor="let type of types" [value]="type">{{ type }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="location-input">
+          <mat-label>Emissionsfaktor</mat-label>
+          <input matInput type="number" [(ngModel)]="location.emissionsFactor" [ngClass]="{'auto-filled': location.isAutoFilled}" [placeholder]="(emissionsFactors.get(location.type) || 0).toString()" (input)="location.isAutoFilled = false">
+        </mat-form-field>
+        <span class="unit-label">g CO₂/kWh</span>
+      </div>
+    </div>
+    <button mat-icon-button class="add-btn" (click)="addLocation()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  

@@ -1,0 +1,101 @@
+<div class="bg-[#FAFAEE] py-10">
+    <div class="container mx-auto px-8 grid grid-cols-1 gap-8 justify-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center">
+        <div class="bg-amber-50 p-6 rounded-lg shadow-md flex flex-col justify-between">
+          <div class="flex flex-col items-center">
+            <img src="assets/eu-icon.png" alt="EU Icon" class="w-16 h-auto mb-4">
+            <h2 class="text-2xl font-bold mb-2 text-center">Werde EU Konform</h2>
+            <p class="text-gray-700 mb-4 text-center">Die EU hat durch eine neue Richtlinie beschlossen, dass ab 2026 auch KMUs eine Berechnung ihrer CO₂-Emissionen durchführen müssen...</p>
+          </div>
+          <div class="flex justify-end">
+            <button routerLink="/dashboard" class="px-4 py-2 bg-green-300 text-black rounded-full font-semibold shadow-md hover:bg-green-400 focus:outline-none flex items-center space-x-2">
+              <span>Jetzt starten</span>
+              <img src="assets/icon-arrow-right.png" alt="Arrow Right" class="w-6 h-6">
+            </button>
+          </div>
+        </div>
+        <div class="bg-amber-50 p-6 rounded-lg shadow-md flex flex-col justify-between">
+          <div class="flex flex-col items-center">
+            <img src="assets/icon-what.png" alt="Help Icon" class="w-16 h-auto mb-4">
+            <h2 class="text-2xl font-bold mb-2 text-center">Wir helfen dir</h2>
+            <p class="text-gray-700 mb-4 text-center">Du verstehst nur Bahnhof? Wir helfen Dir Schritt-für-Schritt bei der Berechnung Deiner Emissionen!</p>
+          </div>
+          <div class="flex justify-end">
+            <button routerLink="/dashboard" class="px-4 py-2 bg-green-300 text-black rounded-full font-semibold shadow-md hover:bg-green-400 focus:outline-none flex items-center space-x-2">
+              <span>Jetzt starten</span>
+              <img src="assets/icon-arrow-right.png" alt="Arrow Right" class="w-6 h-6">
+            </button>
+          </div>
+        </div>
+        <div class="bg-amber-50 p-6 rounded-lg shadow-md flex flex-col justify-between">
+          <div class="flex flex-col items-center">
+            <img src="assets/icon-emissions.png" alt="CO2 Icon" class="w-16 h-auto mb-4">
+            <h2 class="text-2xl font-bold mb-2 text-center">CO₂ Emissionen</h2>
+            <p class="text-gray-700 mb-4 text-center">Weißt Du schon wie viel CO₂ Dein Unternehmen ausstößt?</p>
+          </div>
+          <div class="flex justify-end">
+            <button routerLink="/dashboard" class="px-4 py-2 bg-green-300 text-black rounded-full font-semibold shadow-md hover:bg-green-400 focus:outline-none flex items-center space-x-2">
+              <span>Jetzt starten</span>
+              <img src="assets/icon-arrow-right.png" alt="Arrow Right" class="w-6 h-6">
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Zertifiziert Container -->
+      <div class="relative bg-amber-50 p-6 rounded-lg shadow-md flex justify-between items-center my-2 border border-gray-300">
+        <h2 class="text-4xl font-bold text-left">Unsere Berechnung ist zertifiziert</h2>
+        <img src="assets/icon-certificate.png" alt="Certificate Icon" class="w-16 h-auto ml-4">
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center my-2">
+        <div class="bg-amber-50 p-6 rounded-lg shadow-md flex flex-col justify-between">
+          <div class="flex flex-col items-center">
+            <img src="assets/icon-chart.png" alt="Help Icon" class="w-16 h-auto mb-4">
+            <h2 class="text-2xl font-bold mb-2 text-center">Wir schlüsseln auf</h2>
+            <p class="text-gray-700 mb-4 text-center">Damit Du genau weißt, wie dein Unternehmen abschneidet, stellen wir Deine Emissionen grafisch dar, sodass Du leicht erkennen kannst, wo Verbesserungsbedarf besteht.</p>
+          </div>
+          <div class="flex justify-end">
+            <button routerLink="/dashboard" class="px-4 py-2 bg-green-300 text-black rounded-full font-semibold shadow-md hover:bg-green-400 focus:outline-none flex items-center space-x-2">
+              <span>Bringe jetzt Licht ins Dunkle</span>
+              <img src="assets/icon-arrow-right.png" alt="Arrow Right" class="w-6 h-6">
+            </button>
+          </div>
+        </div>
+        <div class="bg-amber-50 p-6 rounded-lg shadow-md flex flex-col justify-between">
+          <div class="flex flex-col items-center mb-4">
+            <h2 class="text-2xl font-bold mb-2 text-center">Emissionsvergleich</h2>
+            <canvas id="barChart" class="p-6"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="relative bg-amber-50 p-6 rounded-lg shadow-md flex flex-col justify-between items-center border border-gray-300">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 justify-center my-2">
+          <div class="bg-amber-50 p-6 rounded-lg shadow-md flex flex-col justify-between items-center">
+            <img src="assets/icon-easy.png" alt="Easy Icon" class="w-16 h-auto mb-4">
+            <h2 class="text-xl font-bold mb-2 text-center">Einfache Berechnung</h2>
+            <p class="text-gray-700 mb-4 text-center">Einfache Berechnung durch genaue Erklärungen zum ausfüllen der Daten. Den Rest übernehmen wir!</p>
+          </div>
+          <div class="bg-amber-50 p-6 rounded-lg shadow-md flex flex-col justify-between items-center">
+            <img src="assets/icon-compensate.png" alt="Compensate Icon" class="w-16 h-auto mb-4">
+            <h2 class="text-xl font-bold mb-2 text-center">Emissionen kompensieren</h2>
+            <p class="text-gray-700 mb-4 text-center">Finde tolle Möglichkeiten um deine Emissionen zu kompensieren.</p>
+          </div>
+          <div class="bg-amber-50 p-6 rounded-lg shadow-md flex flex-col justify-between items-center">
+            <img src="assets/icon-updates.png" alt="Updates Icon" class="w-16 h-auto mb-4">
+            <h2 class="text-xl font-bold mb-2 text-center">Regelmäßige Updates</h2>
+            <p class="text-gray-700 mb-4 text-center">Die Bestimmungen ändern sich regelmäßig. Wir kümmern uns darum!</p>
+          </div>
+          <div class="bg-amber-50 p-6 rounded-lg shadow-md flex flex-col justify-between items-center">
+            <img src="assets/icon-certificate.png" alt="Certificate Icon" class="w-16 h-auto mb-4">
+            <h2 class="text-xl font-bold mb-2 text-center">Zertifikat</h2>
+            <p class="text-gray-700 mb-4 text-center">Du bekommst nach der Berechnung ein Zertifikat ausgestellt, welches Dein Engagement bestätigt!</p>
+          </div>
+        </div>
+        <div class="flex justify-end w-full mt-4">
+          <button routerLink="/dashboard" class="px-4 py-2 bg-green-300 text-black rounded-full font-semibold shadow-md hover:bg-green-400 focus:outline-none flex items-center space-x-2">
+            <span>Starte jetzt mit der Berechnung</span>
+            <img src="assets/icon-arrow-right.png" alt="Arrow Right" class="w-6 h-6">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

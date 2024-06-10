@@ -1,0 +1,23 @@
+<div class="form-container">
+    <div class="form-group" *ngFor="let vehicle of vehicles; let i = index">
+        <div class="location-container">
+            <button mat-icon-button class="remove-btn" *ngIf="vehicles.length > 1 && i === vehicles.length - 1" (click)="removeVehicle(i)">
+                <mat-icon>cancel</mat-icon>
+            </button>
+            <mat-form-field class="location-input">
+                <mat-label>Kraftstoff</mat-label>
+                <mat-select [(ngModel)]="vehicle.fuel">
+                    <mat-option *ngFor="let fuel of fuels" [value]="fuel">{{ fuel }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="amount-input">
+                <mat-label>Menge (l)</mat-label>
+                <input matInput type="number" [(ngModel)]="vehicle.consumption">
+            </mat-form-field>
+            <span class="unit-label">Liter</span>
+        </div>
+    </div>
+    <button mat-icon-button class="add-btn" (click)="addVehicle()">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>

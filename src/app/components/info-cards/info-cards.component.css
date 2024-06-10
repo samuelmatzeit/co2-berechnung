@@ -1,0 +1,61 @@
+.container {
+    max-width: 1200px;
+  }
+  
+  .bg-amber-50 {
+    background-color: #FAFAEE;
+  }
+  
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Abstand zwischen Text und Icon */
+  }
+  
+  button img {
+    width: 1.5rem; /* Anpassung der Icon-Größe */
+    height: 1.5rem; /* Anpassung der Icon-Größe */
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .space-x-2 {
+    gap: 0.5rem;
+  }
+  
+  .justify-end {
+    justify-content: flex-end;
+  }
+  
+  .mt-10 {
+    margin-top: 2.5rem;
+  }
+  
+  .py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .shadow-md {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  }
+  
+  .rounded-lg {
+    border-radius: 0.75rem;
+  }
+  
+  .bg-white {
+    background-color: #FFFFFF;
+  }
+  

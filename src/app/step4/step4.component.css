@@ -1,0 +1,111 @@
+.form-container {
+    background-color: #DCE7C7;
+    padding: 20px;
+    border-radius: 10px;
+    height: 620px;
+    max-height: 620px;
+    overflow-y: auto;
+}
+
+.mat-form-field {
+    width: 25%; /* Adjust width to fit within the container */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E1E4D5;
+    border: 1px solid #586249;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px; /* Add margin between containers */
+}
+
+.contract-group {
+    display: flex;
+    align-items: center;
+    background-color: #F1F1F1;
+    border: 1px solid #75786C;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.contract-input {
+    flex-grow: 1;
+    margin-right: 20px;
+    margin-left: 40px; /* Add margin to account for X button space */
+}
+
+.amount-input {
+    width: 15%;
+    margin-right: 10px;
+}
+
+.remove-btn {
+    position: absolute;
+    left: 10px; /* Adjust position inside the contract input */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #BA1A1A;
+}
+
+.add-contract-btn, .add-location-btn {
+    display: block;
+    margin: 10px auto;
+    background-color: #DCE7C7;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    position: relative;
+}
+
+.add-contract-btn mat-icon, .add-location-btn mat-icon {
+    color: #000000;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.unit-label {
+    margin-left: 8px;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+/* Additional styles for vertical centering */
+.mat-form-field-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.mat-form-field-flex {
+    align-items: center;
+}
+
+.mat-input-element {
+    height: auto;
+    padding: 0; /* Remove padding to center text vertically */
+    line-height: normal; /* Ensure line height is normal */
+}
+
+.mat-form-field-infix {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

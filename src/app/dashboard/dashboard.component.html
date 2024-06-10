@@ -1,0 +1,46 @@
+<!-- dashboard.component.html -->
+<div class="flex">
+    <app-sidebar></app-sidebar>
+    <div class="flex flex-col flex-grow">
+        <app-topbar></app-topbar>
+        <div class="p-4 grid grid-cols-4 gap-4 auto-rows-min">
+            <div class="col-span-4 flex justify-between items-center mb-4 bg-amber-50 p-4 rounded-lg shadow-md">
+                <h2 class="text-4xl font-bold">CO₂-Emissionen 2024: <span class="text-green-500">300,7t</span></h2>
+                <div class="flex space-x-8">
+                    <div class="flex flex-col items-center text-green-500">
+                        <div class="flex items-center">
+                            <span class="text-2xl font-bold">-10%</span>
+                        </div>
+                        <img src="./assets/arrow-down-icon.png" alt="Arrow Down" class="w-6 h-4">
+                        <span>Erstes Jahr</span>
+                    </div>
+                    <div class="flex flex-col items-center text-red-500">
+                        <div class="flex items-center">
+                            <span class="text-2xl font-bold">+3%</span>
+                        </div>
+                        <img src="./assets/arrow-up-icon.png" alt="Arrow Up" class="w-6 h-4">
+                        <span>Vorjahr</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col-span-2">
+                <app-certificate-download class="h-full"></app-certificate-download>
+            </div>
+            <div class="col-span-1">
+                <app-year-comparison class="h-full"></app-year-comparison>
+            </div>
+            <div class="col-span-1">
+                <app-emission-comparison class="h-full"></app-emission-comparison>
+            </div>
+            <div class="col-span-2 flex flex-col gap-4">
+                <app-compensation-options class="flex-1"></app-compensation-options>
+                <app-now-compensate class="flex-1"></app-now-compensate>
+            </div>
+            <div class="col-span-2">
+                <app-current-emissions class="h-full"></app-current-emissions>
+            </div>
+        </div>
+    </div>
+</div>

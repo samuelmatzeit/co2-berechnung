@@ -1,0 +1,24 @@
+<div class="form-container">
+    <div class="form-group" *ngFor="let energy of energies; let i = index">
+        <div class="location-container">
+            <button mat-icon-button class="remove-btn" *ngIf="energies.length > 1 && i === energies.length - 1" (click)="removeEnergy(i)">
+                <mat-icon>cancel</mat-icon>
+            </button>
+            <mat-form-field class="location-input">
+                <mat-label>Vertrag</mat-label>
+                <mat-select [(ngModel)]="energy.contract">
+                    <mat-option value="">Bitte wählen</mat-option>
+                    <mat-option *ngFor="let contract of contracts" [value]="contract">{{ contract }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="amount-input">
+                <mat-label>Menge</mat-label>
+                <input matInput type="number" [(ngModel)]="energy.amount">
+            </mat-form-field>
+            <span class="unit-label">kWh</span>
+        </div>
+    </div>
+    <button mat-icon-button class="add-btn" (click)="addEnergy()">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>

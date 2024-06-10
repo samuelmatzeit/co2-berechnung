@@ -1,0 +1,69 @@
+<div class="calculation-container relative min-h-screen">
+    <div class="top-bar">
+      <button class="dashboard-button" (click)="navigateToDashboard()">Dashboard</button>
+    </div>
+    <div class="flex justify-center mb-4 mt-4">
+      <div class="relative flex items-center space-x-4">
+        <div *ngFor="let step of steps; let i = index" class="flex items-center">
+          <div class="flex flex-col items-center">
+            <button
+              routerLink="/berechnen"
+              class="flex items-center justify-center px-4 py-2 rounded-full font-semibold shadow-md hover:bg-green-400 focus:outline-none"
+              [ngClass]="{
+                'bg-[#B4D088]': i <= 2,
+                'bg-[#CFEDA1]': i >= 3 && i <= 4,
+                'bg-[#BCECE6]': i === 5,
+                'bg-[#6DBF67]': currentStep === i
+              }"
+              (click)="goToStep(i)"
+            >
+              <span class="text-xl font-bold">{{ i + 1 }}</span>
+            </button>
+            <span class="mt-2" [ngClass]="{ 'font-bold text-lg': currentStep === i, 'text-sm': currentStep !== i }">{{ step }}</span>
+          </div>
+          <div *ngIf="i < steps.length - 1" class="h-1 mx-4 w-16 bg-gray-400"></div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content flex mt-12">
+      <div class="sidebar-left flex items-center justify-center bg-[#DCE7C7] border-r border-black rounded-r-lg p-4 fixed left-0 top-1/2 transform -translate-y-1/2 w-64 h-96">
+        <div class="text-center">
+          <h3 class="text-xl font-bold">{{ leftTitle }}</h3>
+          <p>{{ leftText }}</p>
+        </div>
+      </div>
+      <div class="content flex-grow ml-64 mr-64">
+        <h2 class="text-center text-2xl font-bold mb-4">{{ getStepTitle() }}</h2>
+        <div class="step-container">
+          <ng-container [ngSwitch]="currentStep">
+            <app-step1 *ngSwitchCase="0"></app-step1>
+            <app-step2 *ngSwitchCase="1"></app-step2>
+            <app-step3 *ngSwitchCase="2"></app-step3>
+            <app-step4 *ngSwitchCase="3"></app-step4>
+            <app-step5 *ngSwitchCase="4"></app-step5>
+            <app-step6 *ngSwitchCase="5"></app-step6>
+          </ng-container>
+        </div>
+      </div>
+      <div class="sidebar-right flex items-center justify-center bg-[#DCE7C7] border-l border-black rounded-l-lg p-4 fixed right-0 top-1/2 transform -translate-y-1/2 w-64 h-96">
+        <div class="text-center">
+          <h3 class="text-xl font-bold">{{ rightTitle }}</h3>
+          <p>{{ rightText }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="fixed bottom-0 left-0 w-full navigation-buttons flex items-center justify-between p-4 bg-white">
+      <button class="back-button" (click)="prevStep()">{{ currentStep === 0 ? 'Verlassen' : 'Zurück' }}</button>
+      <div class="progress-bar-container flex-grow mx-4 flex items-center">
+        <span class="text-sm font-semibold">{{ progressPercentage }}%</span>
+        <div class="progress-bar bg-gray-200 h-2 rounded-full mx-4 flex-grow">
+          <div
+            class="progress-bar-fill bg-green-500 h-2 rounded-full"
+            [style.width.%]="progressPercentage"
+          ></div>
+        </div>
+      </div>
+      <button class="next-button" (click)="nextStep()">{{ getButtonText() }}</button>
+    </div>
+  </div>
+  
