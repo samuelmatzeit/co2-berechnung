@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { SharedService } from '../shared.service';
+import { SharedService } from '../../shared.service';
 
 interface Location {
   name: string;

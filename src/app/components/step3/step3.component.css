@@ -29,7 +29,7 @@
 .location-input {
     flex-grow: 1;
     margin-right: 5px;
-    margin-left: 40px; /* Add margin to account for X button space */
+    margin-left: 10px; /* Add margin to account for X button space */
 }
 
 .remove-btn {

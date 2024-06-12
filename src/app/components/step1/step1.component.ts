@@ -4,8 +4,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
-import { SharedService } from '../shared.service';
-import * as types from '../types';
+import { SharedService } from '../../shared.service';
+import * as types from '../../types';
 
 interface YearOption {
   value: string;

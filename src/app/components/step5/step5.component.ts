@@ -6,8 +6,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { SharedService } from '../shared.service';
-import * as types from '../types';
+import { SharedService } from '../../shared.service';
+import * as types from '../../types';
 
 interface Vehicle {
   fuel: string;

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { InfoCardsComponent } from '../components/info-cards/info-cards.component';
-import { HeroComponent } from '../components/hero/hero.component';
-import { HeaderComponent } from '../components/header/header.component';
+import { InfoCardsComponent } from '../info-cards/info-cards.component';
+import { HeroComponent } from '../hero/hero.component';
+import { HeaderComponent } from '../header/header.component';
 import { RouterModule } from '@angular/router';
 
 @Component({

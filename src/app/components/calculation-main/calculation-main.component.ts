@@ -8,7 +8,7 @@ import { Step3Component } from '../step3/step3.component';
 import { Step4Component } from '../step4/step4.component';
 import { Step5Component } from '../step5/step5.component';
 import { Step6Component } from '../step6/step6.component';
-import { SharedService } from '../shared.service';
+import { SharedService } from '../../shared.service';
 
 @Component({
   selector: 'app-calculation-main',
