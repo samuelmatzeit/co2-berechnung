@@ -1,21 +1,24 @@
-# Verwende das offizielle Node.js-Image als Basis
-FROM node:latest
+# Use the official Node.js 18 image as the base image
+FROM node:18
 
-# Setze das Arbeitsverzeichnis innerhalb des Containers
-WORKDIR /usr/src/app
+# Set the working directory inside the container
+WORKDIR /app
 
-# Kopiere die Paketkonfigurationen und installiere die Abhängigkeiten
+# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
+
+# Install the project dependencies
 RUN npm install
 
-# Kopiere den restlichen Quellcode
+# Install Angular CLI globally
+RUN npm install -g @angular/cli
+
+# Copy the rest of the application code to the working directory
 COPY . .
 
-# Führe den Build der Angular-Anwendung aus
-RUN npm run build --prod
+# Expose port 4200 to the outside world
+EXPOSE 4200
 
-# Expose-Port (Optional)
-EXPOSE 80
+# Command to run the application
+CMD ["ng", "serve", "--host", "0.0.0.0"]
 
-# Startbefehl, um den Webserver zu starten
-CMD ["npm", "start"]
