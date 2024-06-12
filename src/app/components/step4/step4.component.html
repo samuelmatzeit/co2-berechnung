@@ -1,28 +1,27 @@
 <div class="form-container">
-    <div class="form-group" *ngFor="let location of locations; let i = index">
+  <div class="form-group" *ngFor="let location of locations; let i = index">
       <div class="location-container">
-        <h3>{{ location.name }}</h3>
-        <div class="contract-group" *ngFor="let contract of location.contracts; let j = index">
-          <button mat-icon-button class="remove-btn" *ngIf="location.contracts.length > 1 && j === location.contracts.length - 1" (click)="removeContract(i, j)">
-            <mat-icon>cancel</mat-icon>
+          <h3>{{ location.name }}</h3>
+          <div class="contract-group" *ngFor="let contract of location.contracts; let j = index">
+              <button mat-icon-button class="remove-btn" *ngIf="location.contracts.length > 1 && j === location.contracts.length - 1" (click)="removeContract(i, j)">
+                  <mat-icon>cancel</mat-icon>
+              </button>
+              <mat-form-field class="contract-input">
+                  <mat-label>Vertrag</mat-label>
+                  <mat-select [(ngModel)]="contract.name" (selectionChange)="contract.amount = 0">
+                      <mat-option value="">Bitte wählen</mat-option>
+                      <mat-option *ngFor="let contractOption of contracts" [value]="contractOption">{{ contractOption }}</mat-option>
+                  </mat-select>
+              </mat-form-field>
+              <mat-form-field class="amount-input">
+                  <mat-label>Menge</mat-label>
+                  <input matInput [(ngModel)]="contract.amount" type="number">
+              </mat-form-field>
+              <span class="unit-label">{{ getContractUnit(contract.name) }}</span>
+          </div>
+          <button mat-icon-button class="add-contract-btn" (click)="addContract(i)">
+              <mat-icon>add</mat-icon>
           </button>
-          <mat-form-field class="contract-input">
-            <mat-label>Vertrag</mat-label>
-            <mat-select [(ngModel)]="contract.name" (selectionChange)="contract.amount = 0">
-              <mat-option value="">Bitte wählen</mat-option>
-              <mat-option *ngFor="let contractOption of contracts" [value]="contractOption">{{contractOption}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="amount-input">
-            <mat-label>Menge</mat-label>
-            <input matInput [(ngModel)]="contract.amount" type="number">
-          </mat-form-field>
-          <span class="unit-label">{{ getContractUnit(contract.name) }}</span>
-        </div>
-        <button mat-icon-button class="add-contract-btn" (click)="addContract(i)">
-          <mat-icon>add</mat-icon>
-        </button>
       </div>
-    </div>
   </div>
-  
+</div>

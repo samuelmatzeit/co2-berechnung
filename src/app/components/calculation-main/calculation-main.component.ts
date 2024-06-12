@@ -14,12 +14,12 @@ import { SharedService } from '../../shared.service';
   selector: 'app-calculation-main',
   standalone: true,
   imports: [
-    CommonModule, 
-    Step1Component, 
-    Step2Component, 
-    Step3Component, 
-    Step4Component, 
-    Step5Component, 
+    CommonModule,
+    Step1Component,
+    Step2Component,
+    Step3Component,
+    Step4Component,
+    Step5Component,
     Step6Component
   ],
   templateUrl: './calculation-main.component.html',
@@ -173,6 +173,7 @@ export class CalculationMainComponent implements OnInit {
   getButtonText(): string {
     return this.isLastStep() ? 'Fertig' : 'Weiter';
   }
+  
   getStepTitle(): string {
     switch (this.currentStep) {
       case 0:
@@ -191,5 +192,4 @@ export class CalculationMainComponent implements OnInit {
         return 'Eingeben der Daten';
     }
   }
-  
 }
