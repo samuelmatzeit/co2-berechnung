@@ -1,10 +1,10 @@
 <div class="form-container">
     <div class="form-group" *ngFor="let vehicle of vehicles; let i = index">
-        <div class="location-container">
+        <div class="fuel-container">
             <button mat-icon-button class="remove-btn" *ngIf="vehicles.length > 1 && i === vehicles.length - 1" (click)="removeVehicle(i)">
                 <mat-icon>cancel</mat-icon>
             </button>
-            <mat-form-field class="location-input">
+            <mat-form-field class="fuel-input">
                 <mat-label>Kraftstoff</mat-label>
                 <mat-select [(ngModel)]="vehicle.fuel">
                     <mat-option *ngFor="let fuel of fuels" [value]="fuel">{{ fuel }}</mat-option>

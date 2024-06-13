@@ -1,12 +1,12 @@
 <div class="form-container">
   <div class="form-group" *ngFor="let location of locations; let i = index">
-      <div class="location-container">
+      <div class="assignment-container">
           <h3>{{ location.name }}</h3>
-          <div class="contract-group" *ngFor="let contract of location.contracts; let j = index">
+          <div class="assignment-group mx-1" *ngFor="let contract of location.contracts; let j = index">
               <button mat-icon-button class="remove-btn" *ngIf="location.contracts.length > 1 && j === location.contracts.length - 1" (click)="removeContract(i, j)">
                   <mat-icon>cancel</mat-icon>
               </button>
-              <mat-form-field class="contract-input">
+              <mat-form-field class="assignment-input ml-10">
                   <mat-label>Vertrag</mat-label>
                   <mat-select [(ngModel)]="contract.name" (selectionChange)="contract.amount = 0">
                       <mat-option value="">Bitte wählen</mat-option>

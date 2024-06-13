@@ -114,7 +114,7 @@ export class Step4Component {
     this.locations[locationIndex].contracts.splice(contractIndex, 1);
   }
 
-  saveLocations() {
+  saveAssignments() {
     const formattedLocations: types.Locations4[] = this.locations.map(location => ({
       location: location.name,
       contracts: location.contracts.map(contract => ({
@@ -127,6 +127,6 @@ export class Step4Component {
 
   @HostListener('window:beforeunload', ['$event'])
   unloadHandler(event: Event) {
-    this.saveLocations();
+    this.saveAssignments();
   }
 }

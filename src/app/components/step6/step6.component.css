@@ -20,7 +20,7 @@
     margin-bottom: 20px;
 }
 
-.location-container {
+.energy-container {
     display: flex;
     align-items: center;
     background-color: #E1E4D5;
@@ -31,7 +31,7 @@
     margin-bottom: 10px; /* Add margin between containers */
 }
 
-.location-input {
+.energy-input {
     flex-grow: 1;
     margin-right: 20px;
     margin-left: 40px; /* Add margin to account for X button space */

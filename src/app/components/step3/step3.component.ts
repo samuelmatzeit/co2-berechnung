@@ -86,7 +86,7 @@ export class Step3Component {
     }
   }
 
-  saveLocations() {
+  saveContracts() {
     this.sharedService.saveContracts3(this.locations.map(location => ({
       name: location.contractName,
       type: location.type,

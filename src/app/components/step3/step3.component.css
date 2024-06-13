@@ -9,14 +9,14 @@
   }
 
 .mat-form-field {
-    width: 25%; /* Adjust width to fit within the container */
+    width: 20%; /* Adjust width to fit within the container */
 }
 
 .form-group {
     margin-bottom: 20px;
 }
 
-.location-container {
+.contract-container {
     display: flex;
     align-items: center;
     background-color: #E1E4D5;
@@ -26,10 +26,10 @@
     position: relative;
     margin-bottom: 10px; /* Add margin between containers */
 }
-.location-input {
-    flex-grow: 1;
+.contract-input {
+    flex-grow: 0.8;
     margin-right: 5px;
-    margin-left: 10px; /* Add margin to account for X button space */
+    margin-left: 5px; /* Add margin to account for X button space */
 }
 
 .remove-btn {

@@ -88,10 +88,10 @@ export class CalculationMainComponent implements OnInit {
         this.step2Component.saveLocations();
         break;
       case 2:
-        this.step3Component.saveLocations();
+        this.step3Component.saveContracts();
         break;
       case 3:
-        this.step4Component.saveLocations();
+        this.step4Component.saveAssignments();
         break;
       case 4:
         this.step5Component.saveVehicles();
