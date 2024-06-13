@@ -2,7 +2,7 @@
     background-color: #DCE7C7;
     padding: 20px;
     border-radius: 10px;
-    height: 620px;
+    height: auto;
     max-height: 620px;
     overflow-y: auto;
 }

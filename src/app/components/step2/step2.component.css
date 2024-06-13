@@ -4,7 +4,7 @@
     border-radius: 10px;
     max-height: 620px;
     overflow-y: auto;
-    height: 620px;
+    height: auto;
 
   }
   
